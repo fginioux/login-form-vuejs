@@ -12,5 +12,12 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      '/login': {
+        target: 'http://localhost:3000/login'
+      }
+    }
   }
 })
