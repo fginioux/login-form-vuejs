@@ -1,0 +1,28 @@
+{
+  "name": "login-form-vuejs",
+  "version": "1.0.0",
+  "description": "Simple login form app with NestJS api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "start:frontend": "echo \"Starting frontend\"",
+    "start:backend": "ech0 \"Starting backend\"",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fginioux/login-form-vuejs.git"
+  },
+  "author": "frederic Ginioux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fginioux/login-form-vuejs/issues"
+  },
+  "homepage": "https://github.com/fginioux/login-form-vuejs#readme",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
