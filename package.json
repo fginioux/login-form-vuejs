@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\"",
     "start:frontend": "echo \"Starting frontend\"",
     "start:backend": "ech0 \"Starting backend\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit"
   },
   "workspaces": [
     "packages/*"
@@ -23,6 +24,10 @@
   },
   "homepage": "https://github.com/fginioux/login-form-vuejs#readme",
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
     "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^18.1.0"
   }
 }
