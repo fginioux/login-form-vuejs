@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "start:frontend": "echo \"Starting frontend\"",
-    "start:backend": "ech0 \"Starting backend\"",
+    "start": "concurrently --kill-others \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "npm run dev -w frontend",
+    "start:backend": "npm run start:dev -w backend",
     "prepare": "husky install",
     "commitlint": "commitlint --edit"
   },
@@ -25,9 +26,8 @@
   "homepage": "https://github.com/fginioux/login-form-vuejs#readme",
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "concurrently": "^8.2.2",
     "husky": "^8.0.0"
-  },
-  "dependencies": {
-    "@commitlint/config-conventional": "^18.1.0"
   }
 }
