@@ -1,20 +1,19 @@
 <script setup>
-import { ref } from 'vue';
-import Login from '@/components/Login.vue';
-import { login } from '@/http';
+import { ref } from 'vue'
+import Login from '@/components/Login.vue'
+import { login } from '@/http'
 
-const errorMsg = ref('');
+const errorMsg = ref('')
 
 async function onSubmit({ username, password }) {
-  const { error } = await login(username, password);
+  const { error } = await login(username, password)
   if (error) {
-    errorMsg.value = error;
-    return;
+    errorMsg.value = error
+    return
   }
 
-
-  errorMsg.value = '';
-  window.alert(`You're logged in!`);
+  errorMsg.value = ''
+  window.alert(`You're logged in!`)
 }
 </script>
 
